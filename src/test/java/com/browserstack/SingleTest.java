@@ -3,6 +3,7 @@ package com.browserstack;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidElement;
 
+import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -15,6 +16,9 @@ public class SingleTest extends BrowserStackTestNGTest {
 
     @Test
     public void test() throws Exception {
+        SessionDetails sessionDetails = new SessionDetails(username, accessKey);
+        SessionId sessionId = driver.getSessionId();
+
       AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(
           ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("Search Wikipedia")));
       searchElement.click();
@@ -36,7 +40,7 @@ public class SingleTest extends BrowserStackTestNGTest {
         else{
             //TestStatus.mark(session,"failed", username, accesskey);
             jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"failed\", \"reason\": \"Not Validated\"}}");
-
+            sessionDetails.fetchData(sessionId);
         }
       
     }
