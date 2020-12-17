@@ -1,0 +1,19 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "UCreate",
+    "name": "local_appium_test",
+    "browserstack.debug": true,
+    "browserstack.local": true,
+    "app": "bs://c53adc108a0dabb8d3fcaade189b05179ab9a1d5"
+  },
+
+  "environments": {
+    "galaxy_s7": {
+      "device": "Samsung Galaxy S7"
+    }
+  }
+}

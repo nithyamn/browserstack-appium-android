@@ -1,0 +1,24 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "nithyamani3",
+  "key": "P4JKysg5WuchQxBfKQu1",
+
+  "capabilities": {
+    "build": "testng-browserstack-1",
+    "name": "suite_appium_test",
+    "browserstack.debug": true,
+    "app": "bs://f2ee50d2323c66ea5d933f0fc8748f52dcf74bf3"
+  },
+
+  "environments": {
+    "pixel": {
+      "device": "Google Pixel"
+    },
+    "galaxy_s7": {
+      "device": "Samsung Galaxy S7"
+    },
+    "nexus_9": {
+      "device": "Google Nexus 9"
+    }
+  }
+}

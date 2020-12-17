@@ -1,0 +1,19 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "UCreate",
+    "name": "single_appium_test",
+    "browserstack.debug": true,
+    "app": "bs://72ac75bf8a391aed7d11d4a512ba43d0495ac3ec"
+  },
+
+  "environments": {
+    "galaxy_s7": {
+      "device": "Samsung Galaxy S20"
+    }
+  }
+}
+
