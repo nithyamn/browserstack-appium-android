@@ -22,6 +22,8 @@ import org.testng.annotations.Parameters;
 public class BrowserStackTestNGTest {
     public AndroidDriver<AndroidElement> driver;
     private Local l;
+    public String username;
+    public String accessKey;
 
     @BeforeMethod(alwaysRun=true)
     @org.testng.annotations.Parameters(value={"config", "environment"})
@@ -51,12 +53,12 @@ public class BrowserStackTestNGTest {
             }
         }
 
-        String username = System.getenv("BROWSERSTACK_USERNAME");
+        username = System.getenv("BROWSERSTACK_USERNAME");
         if(username == null) {
             username = (String) config.get("user");
         }
 
-        String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
+        accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
         if(accessKey == null) {
             accessKey = (String) config.get("key");
         }
@@ -78,6 +80,7 @@ public class BrowserStackTestNGTest {
 
     @AfterMethod(alwaysRun=true)
     public void tearDown() throws Exception {
+
         driver.quit();
         /*if(l != null) l.stop();*/
     }
