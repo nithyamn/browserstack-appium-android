@@ -13,7 +13,7 @@ jobs:
                 paths:
                   - ~/.m2
                 key: 'browserstack-appium-android-{{ checksum "pom.xml" }}'
-            - run: 'mvn test -P single'
+            - run: 'mvn test -P parallel'
             - store_test_results:
                 path: target/surefire-reports
             - store_artifacts:
