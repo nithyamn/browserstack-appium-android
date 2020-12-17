@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/<ProjectName>
+    docker:
+      -
+        image: 'circleci/openjdk:8-jdk-stretch'
+    steps:
+      - checkout
+      -
+        restore_cache:
+          key: '<ProjectName>-{{ checksum "pom.xml" }}'
+      -
+        run: 'mvn dependency:go-offline'
+      -
+        save_cache:
+          paths:
+            - ~/.m2
+          key: '<ProjectName>-{{ checksum "pom.xml" }}'
+      -
+        run: 'mvn test -P single'
+      -
+        store_test_results:
+          path: target/surefire-reports
+      -
+        store_artifacts:
+          path: target/demo-java-spring-0.0.1-SNAPSHOT.jar
