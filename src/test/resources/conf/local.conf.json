@@ -8,7 +8,7 @@
     "name": "local_appium_test",
     "browserstack.debug": true,
     "browserstack.local": true,
-    "app": "bs://c53adc108a0dabb8d3fcaade189b05179ab9a1d5"
+    "app": "bs://"
   },
 
   "environments": {
