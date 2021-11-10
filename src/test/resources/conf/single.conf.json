@@ -7,7 +7,7 @@
     "build": "UCreate",
     "name": "single_appium_test",
     "browserstack.debug": true,
-    "app": "bs://72ac75bf8a391aed7d11d4a512ba43d0495ac3ec"
+    "app": "bs://"
   },
 
   "environments": {
