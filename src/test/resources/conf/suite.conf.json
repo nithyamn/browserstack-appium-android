@@ -1,13 +1,13 @@
 {
   "server": "hub-cloud.browserstack.com",
-  "user": "nithyamani3",
-  "key": "P4JKysg5WuchQxBfKQu1",
+  "user": "",
+  "key": "",
 
   "capabilities": {
     "build": "testng-browserstack-1",
     "name": "suite_appium_test",
     "browserstack.debug": true,
-    "app": "bs://f2ee50d2323c66ea5d933f0fc8748f52dcf74bf3"
+    "app": "bs://"
   },
 
   "environments": {
