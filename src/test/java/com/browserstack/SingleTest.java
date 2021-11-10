@@ -45,8 +45,3 @@ public class SingleTest extends BrowserStackTestNGTest {
       
     }
 }
-/*
-curl -u "nithyamani3:P4JKysg5WuchQxBfKQu1" \
-  -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
-  -F "file=@/Users/nithyamani/Desktop/LocalSample.apk"
-*/
